@@ -26,7 +26,11 @@ sub _list_properties {
             label => 'Group Number',
             html  => sub {
                 my ( $prop, $obj ) = @_;
-                $obj->group_count;
+                my $group_count = $obj->group_count;
+                my $author_id   = $obj->id;
+                my $script      = MT->app->script;
+                return
+                    "<a href='$script?__mode=list&_type=group&blog_id=0&filter=author_id&filter_val=$author_id'>$group_count</a>";
             },
         },
     };
