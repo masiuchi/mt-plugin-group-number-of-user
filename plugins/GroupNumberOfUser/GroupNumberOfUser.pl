@@ -14,6 +14,8 @@ my $plugin = __PACKAGE__->new(
         description =>
             '<__trans phrase="Add group number column in Manage Users screen.">',
 
+        l10n_class => 'GroupNumberOfUser::L10N',
+
         registry => { list_properties => { author => \&_list_properties, }, },
     }
 );
