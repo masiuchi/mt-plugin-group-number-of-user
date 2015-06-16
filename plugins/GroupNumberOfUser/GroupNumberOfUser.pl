@@ -24,9 +24,10 @@ MT->add_plugin($plugin);
 sub _list_properties {
     return {
         group_number => {
-            base  => '__virtual.integer',
-            label => 'Group Number',
-            html  => sub {
+            base    => '__virtual.integer',
+            label   => 'Group Number',
+            display => 'default',
+            html    => sub {
                 my ( $prop, $obj ) = @_;
                 my $group_count = $obj->group_count;
                 my $author_id   = $obj->id;
